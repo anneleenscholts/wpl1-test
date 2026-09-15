@@ -56,13 +56,25 @@ jobs:
         continue-on-error: true
         run: python scripts/check_structure.py public
 
+  check-seo:
+    name: Controleer SEO-basisvereisten
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v7
+
+      - name: Python installeren
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
       - name: SEO-basisvereisten controleren
         continue-on-error: true
         run: python scripts/check_seo.py public
 
   build-and-deploy:
     name: Publiceer naar GitHub Pages
-    needs: [ check-readme, check-html ]
+    needs: [ check-readme, check-html, check-seo ]
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
