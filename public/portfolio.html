@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Jane Doe</title>
+  <meta name="description" content="Portfolio van Jane Doe, student Digitale Vormgeving: projecten in branding, UI/UX en motion design.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <a href="#hoofdinhoud" class="skip-link">Ga naar hoofdinhoud</a>
+    <p class="site-naam">Jane Doe — Digitale Vormgeving</p>
+    <h1>Portfolio</h1>
+    <nav aria-label="Hoofdnavigatie">
+      <ul>
+        <li><a href="index.html">Werkbezoek</a></li>
+        <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="hoofdinhoud">
+
+    <section id="over-mij" aria-labelledby="over-mij-titel">
+      <figure class="profielfoto">
+        <img src="https://placehold.co/300x300?text=Jane" alt="Portretfoto van Jane Doe" width="300" height="300" loading="lazy">
+      </figure>
+      <div class="over-mij-tekst">
+        <h2 id="over-mij-titel">Hoi, ik ben Jane</h2>
+        <p>
+          Ik ben eerstejaarsstudent Digitale Vormgeving aan Hogeschool PXL.
+          Ik hou van helder, speels ontwerp met een sterke basis in typografie
+          en kleur. Mijn interesse gaat vooral uit naar branding en UI/UX-design,
+          met motion design als leuke uitdaging erbij. Op deze pagina vind je
+          een selectie van projecten waar ik met veel plezier aan werkte.
+        </p>
+      </div>
+    </section>
+
+    <section id="projecten" aria-labelledby="projecten-titel">
+      <h2 id="projecten-titel">Projecten</h2>
+
+      <article class="project-kaart">
+        <figure>
+          <img src="https://placehold.co/500x350?text=Brand+Koffiebar+Mos" alt="Huisstijl voor koffiebar Mos: logo, koffiebekers en gevelbord" width="500" height="350" loading="lazy">
+        </figure>
+        <div class="project-info">
+          <h3>Huisstijl koffiebar "Mos"</h3>
+          <p>
+            Volledige huisstijl voor een fictieve koffiebar: logo, kleurenpalet,
+            verpakking en socialmedia-templates. Focus lag op een warme,
+            plantaardige uitstraling passend bij het duurzame concept.
+          </p>
+          <ul class="project-tags">
+            <li>Branding</li>
+            <li>Adobe Illustrator</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-kaart">
+        <figure>
+          <img src="https://placehold.co/500x350?text=App+PlantMaatje" alt="Schermontwerpen van de mobiele app PlantMaatje" width="500" height="350" loading="lazy">
+        </figure>
+        <div class="project-info">
+          <h3>App-concept "PlantMaatje"</h3>
+          <p>
+            UI/UX-ontwerp voor een app die je helpt bij het verzorgen van
+            kamerplanten. Van wireframe tot klikbaar prototype in Figma,
+            inclusief een korte gebruikerstest met medestudenten.
+          </p>
+          <ul class="project-tags">
+            <li>UI/UX</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-kaart">
+        <figure>
+          <img src="https://placehold.co/500x350?text=Motion+Intro" alt="Storyboardframes van een animatie-intro voor een YouTube-kanaal" width="500" height="350" loading="lazy">
+        </figure>
+        <div class="project-info">
+          <h3>Animatie-intro voor YouTube-kanaal</h3>
+          <p>
+            Kortlopende animatie van vijf seconden als opener voor een
+            fictief YouTube-kanaal over illustratie. Opgebouwd vanuit een
+            eigen storyboard, met aandacht voor ritme en typografie in beweging.
+          </p>
+          <ul class="project-tags">
+            <li>Motion design</li>
+            <li>After Effects</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section id="kleurenpalet" aria-labelledby="kleurenpalet-titel">
+      <h2 id="kleurenpalet-titel">Mijn kleurenpalet</h2>
+      <p>
+        Een greep uit de kleuren die ik het vaakst gebruik in mijn werk. Klik op
+        een kleur om de hexcode te kopiëren.
+      </p>
+      <ul class="kleuren-grid">
+        <li><button type="button" class="kleurstaal" data-hex="#7A4A2B">#7A4A2B</button></li>
+        <li><button type="button" class="kleurstaal" data-hex="#3E7C59">#3E7C59</button></li>
+        <li><button type="button" class="kleurstaal" data-hex="#E8A33D">#E8A33D</button></li>
+        <li><button type="button" class="kleurstaal" data-hex="#2B4C7E">#2B4C7E</button></li>
+        <li><button type="button" class="kleurstaal" data-hex="#C4553D">#C4553D</button></li>
+        <li><button type="button" class="kleurstaal" data-hex="#F4EBDD">#F4EBDD</button></li>
+      </ul>
+      <p class="kleur-feedback" role="status" aria-live="polite"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Contact: <a href="mailto:jane.doe@voorbeeld.be">jane.doe@voorbeeld.be</a></p>
+    <p>&copy; 2026 — Lesvoorbeeld Digitale Vormgeving, Hogeschool PXL</p>
+  </footer>
+
+</body>
+</html>

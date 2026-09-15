@@ -1,0 +1,78 @@
+name: CI en publicatie naar GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+
+  check-readme:
+    name: Controleer README.md
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+
+      - name: Controleer of README.md bestaat
+        run: |
+          if [ ! -f README.md ]; then
+            echo "::error::README.md ontbreekt in de root van de repository."
+            exit 1
+          fi
+          echo "README.md gevonden."
+
+  check-html:
+    name: Controleer HTML-semantiek
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+
+      - name: Python installeren
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: html5validator installeren
+        run: pip install html5validator
+
+      - name: HTML-bestanden valideren
+        run: html5validator --root public --also-check-css
+
+      - name: Script- en CSS-conventies controleren
+        run: python scripts/check_structure.py public
+
+  build-and-deploy:
+    name: Publiceer naar GitHub Pages
+    needs: [ check-readme, check-html ]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Repository ophalen
+        uses: actions/checkout@v4
+
+      - name: GitHub Pages configureren
+        uses: actions/configure-pages@v5
+
+      - name: Site als artifact uploaden
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'public'
+
+      - name: Publiceren naar GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
