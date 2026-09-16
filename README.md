@@ -1,4 +1,4 @@
-# Mini-website — voorbeeldproject (PXL)
+# Mini-website voorbeeldproject (PXL)
 
 Dit is een lesvoorbeeld van een kleine, semantisch correct opgebouwde
 website, inclusief een GitHub Actions pipeline die automatisch controleert
