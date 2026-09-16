@@ -5,77 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Werkbezoek Studio Loods 8 — Verslag</title>
   <meta name="description" content="Verslag van een werkbezoek van studenten Digitale Vormgeving aan ontwerpbureau Studio Loods 8.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lora:wght@500;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
 <body>
 
-  <header>
+  <header class="hero">
     <a href="#hoofdinhoud" class="skip-link">Ga naar hoofdinhoud</a>
-    <p class="site-naam">Jane Doe — Digitale Vormgeving</p>
-    <h1>Werkbezoek: een dag bij Studio Loods 8</h1>
-    <nav aria-label="Hoofdnavigatie">
-      <ul>
-        <li><a href="index.html" aria-current="page">Werkbezoek</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-      </ul>
-    </nav>
+    <img class="hero-achtergrond" src="https://placehold.co/1600x900/17160f/17160f?text=Studio+Loods+8" alt="" width="1600" height="900">
+
+    <div class="hero-top">
+      <p class="badge"><span class="stip"></span> Jane Doe</p>
+      <nav aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="index.html" aria-current="page">Werkbezoek</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="hero-inhoud">
+      <p class="hero-eyebrow">Werkbezoek · September 2026</p>
+      <h1>Studio Loods 8</h1>
+    </div>
+
+    <div class="hero-meta">
+      <p class="hero-meta-label">Verslag door</p>
+      <p class="hero-meta-naam"><a href="mailto:jane.doe@voorbeeld.be">Jane Doe</a></p>
+      <p class="hero-meta-rol">Student Digitale Vormgeving</p>
+    </div>
   </header>
 
   <main id="hoofdinhoud">
 
     <section id="intro" aria-labelledby="intro-titel">
-      <h2 id="intro-titel">Over het bezoek</h2>
-      <p>
+      <h2 id="intro-titel" class="sr-only">Over het bezoek</h2>
+      <p class="lede">
         In het kader van het vak Werkplekleren 1 trokken we met de klas Digitale
         Vormgeving naar <strong>Studio Loods 8</strong>, een klein ontwerpbureau
         gevestigd in een oude textielloods. Het bureau bestaat uit een team van
         zes designers en werkt voor kmo's en start-ups aan branding, UI/UX-design
         en motion design. Dit verslag is fictief en dient als lesvoorbeeld.
       </p>
-      <figure>
-        <img src="https://placehold.co/800x400?text=Studio+Loods+8" alt="De ontvangstruimte van Studio Loods 8, met een lange houten tafel en moodboards aan de muur" width="800" height="400" loading="lazy">
-        <figcaption>De ontvangstruimte van Studio Loods 8.</figcaption>
-      </figure>
     </section>
 
-    <section id="verwachtingen" aria-labelledby="verwachtingen-titel">
-      <h2 id="verwachtingen-titel">Wat ik vooraf verwachtte</h2>
-      <p>
-        Ik verwachtte een bureau waar mensen vooral stil achter een scherm zitten
-        te tekenen in Illustrator of Photoshop, met weinig overleg. Ik dacht dat
-        het werk vooral over "er mooi laten uitzien" ging, en minder over
-        strategie of onderzoek. Ik verwachtte ook dat er weinig rechtstreeks
-        klantcontact zou zijn, en dat designers vooral opdrachten kregen
-        doorgestuurd via een projectleider.
-      </p>
+    <hr class="scheiding">
+
+    <section id="aansprak" aria-labelledby="aansprak-titel">
+      <div class="sectie-titel">
+        <span class="bolletje"></span>
+        <h2 id="aansprak-titel">Wat mij aansprak</h2>
+      </div>
+      <div class="kaarten-grid">
+        <article class="info-kaart">
+          <span class="emoji" aria-hidden="true">🤝</span>
+          <h3>Informele werksfeer</h3>
+          <p>De informele, open werksfeer en het platte team zonder strikte hiërarchie.</p>
+          <p class="label">Team</p>
+        </article>
+        <article class="info-kaart">
+          <span class="emoji" aria-hidden="true">🎨</span>
+          <h3>Afwisseling in disciplines</h3>
+          <p>De afwisseling tussen branding, UI/UX en motion design binnen één bureau.</p>
+          <p class="label">Disciplines</p>
+        </article>
+        <article class="info-kaart">
+          <span class="emoji" aria-hidden="true">💡</span>
+          <h3>Eigen inbreng</h3>
+          <p>De vrijheid om zelf een eerste ontwerprichting voor te stellen aan een klant.</p>
+          <p class="label">Autonomie</p>
+        </article>
+        <article class="info-kaart">
+          <span class="emoji" aria-hidden="true">🛠️</span>
+          <h3>Vertrouwde tools</h3>
+          <p>Het gebruik van tools die we ook op school leren, zoals Figma en Adobe Illustrator.</p>
+          <p class="label">Tools</p>
+        </article>
+      </div>
     </section>
+
+    <hr class="scheiding">
 
     <section id="jobinhoud" aria-labelledby="jobinhoud-titel">
-      <h2 id="jobinhoud-titel">Wat we te zien kregen: de jobinhoud</h2>
-      <p>
+      <div class="sectie-titel">
+        <span class="bolletje"></span>
+        <h2 id="jobinhoud-titel">Wat we te zien kregen: de jobinhoud</h2>
+      </div>
+      <p class="sectie-intro">
         Tijdens de rondleiding gaven twee designers uitleg over hun dagelijkse
         taken. Dat gaf een heel ander beeld dan verwacht:
       </p>
 
-      <article>
-        <h3>UI/UX-designer</h3>
-        <p>
-          Start elk project met gebruikersonderzoek en gesprekken met de klant.
-          Maakt nadien wireframes en klikbare prototypes in Figma, test die bij
-          echte gebruikers en verwerkt feedback in meerdere revisierondes,
-          vooraleer het ontwerp naar de developers gaat.
-        </p>
-      </article>
+      <div class="zigzag">
+        <div class="zigzag-media">
+          <img src="https://placehold.co/700x500?text=UI%2FUX-designer" alt="Werkplek van de UI/UX-designer met wireframes en een klikbaar prototype in Figma" width="700" height="500" loading="lazy">
+        </div>
+        <article class="zigzag-tekst">
+          <p class="zigzag-eyebrow">Rol</p>
+          <h3>UI/UX-designer</h3>
+          <p>
+            Start elk project met gebruikersonderzoek en gesprekken met de klant.
+            Maakt nadien wireframes en klikbare prototypes in Figma, test die bij
+            echte gebruikers en verwerkt feedback in meerdere revisierondes,
+            vooraleer het ontwerp naar de developers gaat.
+          </p>
+        </article>
+      </div>
 
-      <article>
-        <h3>Motion designer</h3>
-        <p>
-          Werkt aan korte animaties en video-content voor sociale media en
-          websites. Begint met een storyboard, overlegt dat met de klant, en
-          bouwt de animatie op in lagen zodat aanpassingen achteraf snel kunnen.
-        </p>
-      </article>
+      <div class="zigzag zigzag--rechts">
+        <div class="zigzag-media">
+          <img src="https://placehold.co/700x500?text=Motion+designer" alt="Werkplek van de motion designer met een storyboard en animatielagen" width="700" height="500" loading="lazy">
+        </div>
+        <article class="zigzag-tekst">
+          <p class="zigzag-eyebrow">Rol</p>
+          <h3>Motion designer</h3>
+          <p>
+            Werkt aan korte animaties en video-content voor sociale media en
+            websites. Begint met een storyboard, overlegt dat met de klant, en
+            bouwt de animatie op in lagen zodat aanpassingen achteraf snel kunnen.
+          </p>
+        </article>
+      </div>
 
       <p>
         Beiden gaven aan dat een groot deel van hun tijd naar overleg en
@@ -83,36 +136,57 @@
       </p>
     </section>
 
-    <section id="aansprak" aria-labelledby="aansprak-titel">
-      <h2 id="aansprak-titel">Wat mij aansprak</h2>
-      <ul>
-        <li>De informele, open werksfeer en het platte team zonder strikte hiërarchie.</li>
-        <li>De afwisseling tussen branding, UI/UX en motion design binnen één bureau.</li>
-        <li>De vrijheid om zelf een eerste ontwerprichting voor te stellen aan een klant.</li>
-        <li>Het gebruik van tools die we ook op school leren, zoals Figma en Adobe Illustrator.</li>
-      </ul>
-    </section>
+    <hr class="scheiding">
 
-    <section id="kritisch" aria-labelledby="kritisch-titel">
-      <h2 id="kritisch-titel">Wat minder meeviel</h2>
-      <p>
-        Sommige designers gaven aan dat strakke deadlines en eindeloze
-        revisierondes met klanten soms frustrerend zijn. Ook is er best wat
-        administratief werk, zoals het bijhouden van uren per project, dat
-        minder met creativiteit te maken heeft.
+    <section id="leerpunten" aria-labelledby="leerpunten-titel">
+      <div class="sectie-titel">
+        <span class="bolletje"></span>
+        <h2 id="leerpunten-titel">Wat ik leerde</h2>
+      </div>
+      <p class="sectie-intro">
+        Een dag meelopen leert je dingen die een brochure niet vertelt — over
+        mijn verwachtingen vooraf, de minder leuke kanten, en mijn conclusie
+        achteraf.
       </p>
+      <div class="kaarten-grid">
+        <article class="info-kaart" id="verwachtingen">
+          <span class="emoji" aria-hidden="true">💭</span>
+          <h3>Vooraf verwacht</h3>
+          <p>
+            Ik verwachtte een bureau waar mensen vooral stil achter een scherm zitten
+            te tekenen in Illustrator of Photoshop, met weinig overleg. Ik dacht dat
+            het werk vooral over "er mooi laten uitzien" ging, en minder over
+            strategie of onderzoek. Ik verwachtte ook dat er weinig rechtstreeks
+            klantcontact zou zijn, en dat designers vooral opdrachten kregen
+            doorgestuurd via een projectleider.
+          </p>
+          <p class="label">Verwachting</p>
+        </article>
+        <article class="info-kaart" id="kritisch">
+          <span class="emoji" aria-hidden="true">⚠️</span>
+          <h3>Wat minder meeviel</h3>
+          <p>
+            Sommige designers gaven aan dat strakke deadlines en eindeloze
+            revisierondes met klanten soms frustrerend zijn. Ook is er best wat
+            administratief werk, zoals het bijhouden van uren per project, dat
+            minder met creativiteit te maken heeft.
+          </p>
+          <p class="label">Realiteit</p>
+        </article>
+        <aside class="info-kaart" id="conclusie" aria-labelledby="conclusie-titel">
+          <span class="emoji" aria-hidden="true">✅</span>
+          <h3 id="conclusie-titel">Mijn conclusie</h3>
+          <p>
+            Ik vond het een leerrijk en aangenaam bezoek. Het bureau werkte
+            creatiever en meer overlegd dan ik had verwacht, en dat sprak me aan.
+            Het beeld dat digitale vormgeving vooral "mooi tekenen" is, klopte niet:
+            onderzoek, overleg en samenwerking nemen minstens evenveel plaats in.
+            Ik zou zeker overwegen om ooit stage te lopen bij een bureau zoals dit.
+          </p>
+          <p class="label">Conclusie</p>
+        </aside>
+      </div>
     </section>
-
-    <aside aria-labelledby="conclusie-titel">
-      <h2 id="conclusie-titel">Mijn conclusie</h2>
-      <p>
-        Ik vond het een leerrijk en aangenaam bezoek. Het bureau werkte
-        creatiever en meer overlegd dan ik had verwacht, en dat sprak me aan.
-        Het beeld dat digitale vormgeving vooral "mooi tekenen" is, klopte niet:
-        onderzoek, overleg en samenwerking nemen minstens evenveel plaats in.
-        Ik zou zeker overwegen om ooit stage te lopen bij een bureau zoals dit.
-      </p>
-    </aside>
 
   </main>
 

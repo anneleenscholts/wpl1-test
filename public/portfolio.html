@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio — Jane Doe</title>
   <meta name="description" content="Portfolio van Jane Doe, student Digitale Vormgeving: projecten in branding, UI/UX en motion design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lora:wght@500;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
 </head>
@@ -12,14 +15,16 @@
 
   <header>
     <a href="#hoofdinhoud" class="skip-link">Ga naar hoofdinhoud</a>
-    <p class="site-naam">Jane Doe — Digitale Vormgeving</p>
+    <div class="hero-top">
+      <p class="badge"><span class="stip"></span> Jane Doe</p>
+      <nav aria-label="Hoofdnavigatie">
+        <ul>
+          <li><a href="index.html">Werkbezoek</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+        </ul>
+      </nav>
+    </div>
     <h1>Portfolio</h1>
-    <nav aria-label="Hoofdnavigatie">
-      <ul>
-        <li><a href="index.html">Werkbezoek</a></li>
-        <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main id="hoofdinhoud">
@@ -29,7 +34,10 @@
         <img src="https://placehold.co/300x300?text=Jane" alt="Portretfoto van Jane Doe" width="300" height="300" loading="lazy">
       </figure>
       <div class="over-mij-tekst">
-        <h2 id="over-mij-titel">Hoi, ik ben Jane</h2>
+        <div class="sectie-titel">
+          <span class="bolletje"></span>
+          <h2 id="over-mij-titel">Hoi, ik ben Jane</h2>
+        </div>
         <p>
           Ik ben eerstejaarsstudent Digitale Vormgeving aan Hogeschool PXL.
           Ik hou van helder, speels ontwerp met een sterke basis in typografie
@@ -40,14 +48,55 @@
       </div>
     </section>
 
+    <hr class="scheiding">
+
+    <section id="motivatie" aria-labelledby="motivatie-titel">
+      <div class="sectie-titel">
+        <span class="bolletje"></span>
+        <h2 id="motivatie-titel">Waarom ik designer wil worden</h2>
+      </div>
+      <div class="kaarten-grid">
+        <article class="info-kaart">
+          <span class="emoji" aria-hidden="true">🎨</span>
+          <h3>Vorm geven aan ideeën</h3>
+          <p>Ik vind het fascinerend hoe een goed ontwerp een abstract idee meteen duidelijk en aantrekkelijk maakt. Die vertaalslag van concept naar beeld trekt me het meest aan.</p>
+          <p class="label">Creativiteit</p>
+        </article>
+        <article class="info-kaart">
+          <span class="emoji" aria-hidden="true">🧩</span>
+          <h3>Problemen oplossen</h3>
+          <p>Design is voor mij meer dan iets mooi maken: het is nadenken over hoe iemand een product of dienst ervaart, en daar een werkende oplossing voor bedenken.</p>
+          <p class="label">UX-denken</p>
+        </article>
+        <article class="info-kaart">
+          <span class="emoji" aria-hidden="true">🌱</span>
+          <h3>Blijven leren</h3>
+          <p>De sector verandert snel, met steeds nieuwe tools en trends. Die constante groei spreekt me aan; ik wil een vak uitoefenen waarin ik nooit uitgeleerd raak.</p>
+          <p class="label">Groei</p>
+        </article>
+        <article class="info-kaart">
+          <span class="emoji" aria-hidden="true">🤝</span>
+          <h3>Samen bouwen aan een merk</h3>
+          <p>Tijdens mijn werkbezoek aan Studio Loods 8 zag ik hoe designers nauw samenwerken met klanten en elkaar. Die combinatie van creativiteit en overleg is precies wat ik zoek in mijn toekomstige job.</p>
+          <p class="label">Samenwerking</p>
+        </article>
+      </div>
+    </section>
+
+    <hr class="scheiding">
+
     <section id="projecten" aria-labelledby="projecten-titel">
-      <h2 id="projecten-titel">Projecten</h2>
+      <div class="sectie-titel">
+        <span class="bolletje"></span>
+        <h2 id="projecten-titel">Projecten</h2>
+      </div>
 
       <article class="project-kaart">
         <figure>
           <img src="https://placehold.co/500x350?text=Brand+Koffiebar+Mos" alt="Huisstijl voor koffiebar Mos: logo, koffiebekers en gevelbord" width="500" height="350" loading="lazy">
         </figure>
         <div class="project-info">
+          <span class="emoji" aria-hidden="true">☕</span>
           <h3>Huisstijl koffiebar "Mos"</h3>
           <p>
             Volledige huisstijl voor een fictieve koffiebar: logo, kleurenpalet,
@@ -66,6 +115,7 @@
           <img src="https://placehold.co/500x350?text=App+PlantMaatje" alt="Schermontwerpen van de mobiele app PlantMaatje" width="500" height="350" loading="lazy">
         </figure>
         <div class="project-info">
+          <span class="emoji" aria-hidden="true">📱</span>
           <h3>App-concept "PlantMaatje"</h3>
           <p>
             UI/UX-ontwerp voor een app die je helpt bij het verzorgen van
@@ -84,6 +134,7 @@
           <img src="https://placehold.co/500x350?text=Motion+Intro" alt="Storyboardframes van een animatie-intro voor een YouTube-kanaal" width="500" height="350" loading="lazy">
         </figure>
         <div class="project-info">
+          <span class="emoji" aria-hidden="true">🎬</span>
           <h3>Animatie-intro voor YouTube-kanaal</h3>
           <p>
             Kortlopende animatie van vijf seconden als opener voor een
@@ -98,8 +149,13 @@
       </article>
     </section>
 
+    <hr class="scheiding">
+
     <section id="kleurenpalet" aria-labelledby="kleurenpalet-titel">
-      <h2 id="kleurenpalet-titel">Mijn kleurenpalet</h2>
+      <div class="sectie-titel">
+        <span class="bolletje"></span>
+        <h2 id="kleurenpalet-titel">Mijn kleurenpalet</h2>
+      </div>
       <p>
         Een greep uit de kleuren die ik het vaakst gebruik in mijn werk. Klik op
         een kleur om de hexcode te kopiëren.
